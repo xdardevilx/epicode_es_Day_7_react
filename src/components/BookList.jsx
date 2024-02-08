@@ -1,15 +1,15 @@
-import { useState } from 'react'
-import SingleBook from './SingleBook'
-import { Col, Form, Row } from 'react-bootstrap'
-import CommentArea from './CommentArea'
+import { useState } from "react";
+import SingleBook from "./SingleBook";
+import { Col, Form, Row } from "react-bootstrap";
+import CommentArea from "./CommentArea";
 
 const BookList = ({ books }) => {
-  const [searchQuery, setSearchQuery] = useState('')
-  const [selectedBook, setSelectedBook] = useState(null)
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedBook, setSelectedBook] = useState(null);
 
   const changeSelectedBook = (asin) => {
-    setSelectedBook(asin)
-  }
+    setSelectedBook(asin);
+  };
 
   return (
     <>
@@ -42,11 +42,11 @@ const BookList = ({ books }) => {
           </Row>
         </Col>
         <Col md={4}>
-          <CommentArea asin={selectedBook} />
+          <CommentArea data-testid="commentarea" asin={selectedBook} />
         </Col>
       </Row>
     </>
-  )
-}
+  );
+};
 
-export default BookList
+export default BookList;

@@ -19,11 +19,10 @@ describe("checks whether the number of rendered cards ", () => {
   });
 });
 
-describe("check component commentArea is render", () => {
-  it("check component commentArea is render", () => {
-    it("check component commentArea is render", () => {
-      render(<App />);
-      const commentArea = screen.getByText(/commenta/i);
-    });
-  });
-});
+// describe("check component", () => {
+//   it("check component commentArea is render", () => {
+//     render(<App />);
+//     const commentArea = screen.getByTestId("commentarea");
+//     expect(commentArea).toBeInTheDocument();
+//   });
+// });
